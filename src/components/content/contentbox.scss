@@ -1,0 +1,140 @@
+.content-wrapper {
+    margin-top: 360px;
+}
+
+.placeholder-map {
+    margin-top: 360px;
+    height: 400px;
+    width: 100vw;
+    background-image: url('../../assets/map.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 2;
+    position: relative;
+    top: -80px;
+
+    .map-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        background: linear-gradient(45deg, #514A9D, #24C6DC);
+    }
+}
+
+.general-content {
+    position: relative;
+    top: -80px;
+    box-shadow: 0 0 50px rgba(17, 17, 17, 0.12);
+    border-radius: 0.375rem;
+    padding: 40px 20px;
+    justify-content: space-between;
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+
+    .details-list {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        .details-list-item {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            border-bottom: 1px solid #24C6DC;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+
+            .list-item-title {
+                color: #24C6DC;
+                font-family: 'Montserrat';
+                margin-right: 2em;
+                font-weight: 700;
+            }
+
+            .list-item-descrip {
+                font-family: 'Montserrat';
+                
+            }
+        }
+    }
+}
+
+.content-section-title {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    top: -40px;
+    color: rgb(151, 151, 151);
+    z-index: 2;
+
+    .section-title {
+        font-size: 50px;
+        font-family: 'Montserrat';
+        font-weight: 700;
+    }
+}
+
+.content-flag {
+    width: 250px;
+    position: absolute;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(17, 17, 17, 0.35);
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+    bottom: 2em;
+    left: 50%;
+    transform: translatex(-50%);
+    z-index: 999;
+
+    .flag-img {
+        border-radius: 10px;
+    }
+
+    .street-link {
+        display: flex;
+        align-items: center;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 14px;
+        color: #fff;
+        background: linear-gradient(-45deg, #514A9D, #24C6DC);
+        border-radius: .375rem;
+        padding: 7px 15px;
+
+        i {
+            font-size: 15px;
+            margin-right: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .content-section-title {
+        width: 80%;
+    }
+
+    .general-content {
+        width: 80%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .content-section-title {
+        width: 95%;
+    }
+    .general-content {
+        width: 95%;
+    }
+  }
