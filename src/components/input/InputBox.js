@@ -3,7 +3,6 @@ import publicIp from 'public-ip';
 import axios from 'axios';
 import './input.scss';
 import { Button, Input } from "@chakra-ui/react";
-import { key } from '../../api/api';
 
 export const InputBox = ({setContent}) => {
 
