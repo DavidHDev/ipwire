@@ -23,7 +23,7 @@ export const ContentBox = ({content}) => {
                 <Marker position={position}></Marker>
 
                 <div className="content-flag">
-                    <img className="flag-img" width="50px" height="50px" src={content.location.country_flag} alt="country-flag"/>
+                    {/* <img className="flag-img" width="50px" height="50px" src={content.location.country_flag} alt="country-flag"/> */}
                     <a 
                     className="street-link" 
                     target="_blank" 
@@ -42,7 +42,7 @@ export const ContentBox = ({content}) => {
             <div className="general-content">
             <Stat>
                 <StatLabel>Continent</StatLabel>
-                <StatNumber>{`${content.continent_name} (${content.continent_code})`}</StatNumber>
+                <StatNumber>{`${content.continent_code}`}</StatNumber>
             </Stat>
             <Stat>
                 <StatLabel>Country</StatLabel>
@@ -50,7 +50,7 @@ export const ContentBox = ({content}) => {
             </Stat>
             <Stat>
                 <StatLabel>Region</StatLabel>
-                <StatNumber>{`${content.region_name} (${content.region_code})`}</StatNumber>
+                <StatNumber>{`${content.region} (${content.region_code})`}</StatNumber>
             </Stat>
             <Stat>
                 <StatLabel>City</StatLabel>
@@ -67,19 +67,11 @@ export const ContentBox = ({content}) => {
                 <div className="details-list">
                     <div className="details-list-item">
                         <h3 className="list-item-title">Zip Code</h3>
-                        <p className="list-item-descrip">{content.zip}</p>
+                        <p className="list-item-descrip">{content.postal}</p>
                     </div>
                     <div className="details-list-item">
                         <h3 className="list-item-title">Capital</h3>
-                        <p className="list-item-descrip">{content.location.capital}</p>
-                    </div>
-                    <div className="details-list-item">
-                        <h3 className="list-item-title">Language</h3>
-                        <p className="list-item-descrip">{content.location.languages[0].name + ` (${content.location.languages[0].native})`}</p>
-                    </div>
-                    <div className="details-list-item">
-                        <h3 className="list-item-title">EU Member</h3>
-                        <p className="list-item-descrip">{content.location.is_eu ? 'Yes' : 'No'}</p>
+                        <p className="list-item-descrip">{content.country_capital}</p>
                     </div>
                     <div className="details-list-item">
                         <h3 className="list-item-title">Coordinates</h3>

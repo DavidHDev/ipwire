@@ -12,7 +12,7 @@ export const InputBox = ({setContent}) => {
     const [scroll, setScroll] = useState(true)
 
     const getContent = (ip) => {
-        axios.get(`http://api.ipstack.com/${ip}?access_key=${key}`)
+        axios.get(`https://ipapi.co/${ip}/json/`)
             .then(res => {
                 setContent(res.data);
             })

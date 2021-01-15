@@ -24,7 +24,7 @@ export const Header = () => {
                 <i className={'eva eva-globe-outline logo-icon'}></i>
                 <p>IP TrackTool</p>
             </div>
-            <h1 className="header-title">{scroll ? 'Track any IP and discover essential information.' : ''}</h1>
+            <h1 className="header-title">{scroll ? 'Track any IP and discover useful information.' : ''}</h1>
         </div>
     )
 }
