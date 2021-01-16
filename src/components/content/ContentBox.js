@@ -34,7 +34,6 @@ export const ContentBox = ({ content, country }) => {
               </a>
             </div>
           </MapContainer>
-          {console.log(country)}
           <div className="content-section-title">
             <h2 className="section-title">General</h2>
           </div>
