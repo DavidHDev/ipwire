@@ -9,7 +9,7 @@ export const ContentBox = ({ content, country }) => {
     <>
       {content.ip && (
         <div className="content-wrapper">
-          <MapContainer center={[content.latitude, content.longitude]} zoom={3} scrollWheelZoom={false}>
+          <MapContainer center={[content.latitude, content.longitude]} zoom={3} scrollWheelZoom={false} dragging={false} touchZoom={true}>
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
