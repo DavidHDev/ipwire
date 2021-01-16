@@ -54,12 +54,13 @@
         border: none;
         background: linear-gradient(-45deg, #514A9D, #24C6DC);
         color: #f5f5f5;
-        width: 100px;
+        min-width: 100px;
         right: 1.5em;
         height: 40px;
         z-index: 4;
         position: absolute;
         top: 50%;
+        transition: .3s ease;
         transform: translatey(-50%);
 
         &:hover {

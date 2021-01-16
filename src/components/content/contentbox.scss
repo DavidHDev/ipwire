@@ -2,6 +2,17 @@
     margin-top: 360px;
 }
 
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: linear-gradient(45deg, #514A9D, #24C6DC);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .placeholder-map {
     margin-top: 360px;
     height: 400px;

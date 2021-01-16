@@ -7,12 +7,13 @@ import { ContentBox } from './components/content/ContentBox';
 function App() {
 
   const [content, setContent] = useState([])
+  const [country, setCountry] = useState([])
 
   return (
     <div className="app">
       <Header></Header>
-      <InputBox setContent={setContent}></InputBox>
-      <ContentBox content={content}></ContentBox>
+      <InputBox setContent={setContent} setCountry={setCountry}></InputBox>
+      <ContentBox content={content} country={country}></ContentBox>
     </div>
   );
 }
