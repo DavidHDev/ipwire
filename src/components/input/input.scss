@@ -13,7 +13,7 @@
     transition: .3s ease;
 
     .main-input {
-        font-family: 'Montserrat';
+        font-family: 'Sora', sans-serif;
         position: relative;
         z-index: 3;
         height: 80px;
@@ -49,10 +49,10 @@
 
 
     .main-button {
-        font-family: 'Montserrat';
+        font-family: 'Sora', sans-serif;
         font-weight: 500;
         border: none;
-        background: linear-gradient(-45deg, #514A9D, #24C6DC);
+        background: #4B3CFF !important;
         color: #f5f5f5;
         min-width: 100px;
         right: 1.5em;
@@ -64,7 +64,7 @@
         transform: translatey(-50%);
 
         &:hover {
-            background: linear-gradient(-45deg, #514A9D, #24C6DC);
+            background: #24C6DC;
             opacity: 0.8;
             transition: .3s ease;
         }
@@ -89,7 +89,7 @@
 
   @media only screen and (max-width: 1200px) {
     .app-inputbox {
-        width: 80vw;
+        width: 80%;
     }
 
     .input-box-small {
@@ -100,7 +100,7 @@
 
   @media only screen and (max-width: 500px) {
     .app-inputbox {
-        width: 95vw;
+        width: 95%;
 
         .main-input {
             font-size: 14px;

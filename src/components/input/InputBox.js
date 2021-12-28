@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import publicIp from 'public-ip';
 import axios from 'axios';
 import './input.scss';
 import { Button, Input } from "@chakra-ui/react";
 
-export const InputBox = ({setContent, setCountry}) => {
+export const InputBox = ({ setContent, setCountry }) => {
 
     const [input, setInput] = useState('')
 
@@ -25,7 +25,7 @@ export const InputBox = ({setContent, setCountry}) => {
     }
 
     const getCountry = (countryName) => {
-        axios.get(`https://restcountries.eu/rest/v2/name/${countryName}`)
+        axios.get(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
             .then(res => {
                 setCountry(res.data[0]);
             })
@@ -35,38 +35,43 @@ export const InputBox = ({setContent, setCountry}) => {
         return publicIp.v4();
     }
 
-    useEffect(() => {
+    const fetchData = () => {
         getPublicIp()
             .then(res => {
                 setInput(res);
                 getContent(res);
             })
+    }
+
+    useEffect(() => {
+        fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(() => {
         document.addEventListener("scroll", () => {
             const scrollCheck = window.scrollY < 50
             if (scrollCheck !== scroll) {
-              setScroll(scrollCheck)
+                setScroll(scrollCheck)
             }
-          })
+        })
     })
 
     return (
         <div className={scroll ? 'app-inputbox' : 'app-inputbox input-box-small'}>
-            <Input 
+            <Input
                 value={input}
-                onChange={e => setInput(e.target.value)} 
-                className={"main-input"} 
-                placeholder='IP Address'>     
+                onChange={e => setInput(e.target.value)}
+                className={"main-input"}
+                placeholder='IP Address'>
             </Input>
             <Input disabled className={"main-input dummy-input"}></Input>
-            <Button 
-            onClick={() => getContent(input)} 
-            isLoading={loader}
-            loadingText="Searching"
-            className={"main-button"} 
-            variant='outline'
+            <Button
+                onClick={() => getContent(input)}
+                isLoading={loader}
+                loadingText="Searching"
+                className={"main-button"}
+                variant='outline'
             >
                 Track
             </Button>

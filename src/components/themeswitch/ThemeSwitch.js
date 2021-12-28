@@ -14,7 +14,6 @@ export const ThemeSwitch = () => {
                 ? <i className="eva eva-moon-outline theme-icon"></i>
                 : <i className="eva eva-sun-outline theme-icon"></i>
             }
-            <p className="theme-switch-text">Dark Mode</p>
             <Switch isChecked={darkMode.value} onChange={darkMode.toggle} className="app-switch" colorScheme="cyan" size="lg" />
         </div>
     )

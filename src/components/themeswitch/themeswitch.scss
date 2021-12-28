@@ -2,17 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
-    box-shadow: 0 10px 50px rgba(17, 17, 17, 0.35);
-    padding: 10px 25px;
-    border-radius: 0.375rem;
     z-index: 10;
-    position: absolute;
-    top: 2em;
-    right: 2em;
 
     .theme-switch-text {
         opacity: 0.8;
+        color: #fff;
         font-weight: 500;
         margin: 0;
         position: relative;
@@ -24,14 +18,12 @@
     }
 
     .app-switch {
-        margin-left: 1em;
+        margin-left: .5em;
     }
 }
 
 @media only screen and (max-width: 500px) {
     .app-theme-switcher {
         font-size: 12px;
-        top: 1em;
-        right: 1em;
     }
   }

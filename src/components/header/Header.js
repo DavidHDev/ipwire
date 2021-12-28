@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { ThemeSwitch } from '../themeswitch/ThemeSwitch';
+import logo from '../../assets/ipwire-logo.svg';
 import './header.scss';
 
 export const Header = () => {
@@ -10,20 +11,19 @@ export const Header = () => {
         document.addEventListener("scroll", () => {
             const scrollCheck = window.scrollY < 50
             if (scrollCheck !== scroll) {
-              setScroll(scrollCheck)
+                setScroll(scrollCheck)
             }
-          })
+        })
     })
 
     return (
         <div className={scroll ? 'app-header' : 'app-header app-header-small'}>
-            <ThemeSwitch></ThemeSwitch>
-            <div className={'header-bg'}></div>
-            <div className={'header-overlay'}></div>
-            <div className={'app-logo'}>
-                <i className={'eva eva-globe-outline logo-icon'}></i>
-                <p>IP TrackTool</p>
-            </div>
+            <nav className='app-navigation'>
+                <ThemeSwitch></ThemeSwitch>
+                <div onClick={() => window.scrollTo(0, 0)} className={'app-logo'}>
+                    <img src={logo} alt="ipwire logo" />
+                </div>
+            </nav>
             <h1 className="header-title">{scroll ? 'Track any IP and discover useful information.' : ''}</h1>
         </div>
     )

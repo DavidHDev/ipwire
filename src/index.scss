@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-@import '/node_modules/eva-icons/style/eva-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+@import url('/node_modules/eva-icons/style/eva-icons.css');
 
 /* width */
 ::-webkit-scrollbar {
@@ -16,21 +16,30 @@
   background:  #cfcfcf;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   color: #333 !important;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Sora', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .leaflet-container {
-  min-height: 400px;
+  min-height: 600px;
   position: relative;
   top: -80px;
   z-index: 2;
   opacity: 1;
+}
+
+.chakra-switch__track {
+  background: #4B3CFF !important;
+  background-color: #4B3CFF !important;
 }
 
 body.dark-mode .leaflet-container {
@@ -41,34 +50,32 @@ body.dark-mode .section-title {
   color: #f5f5f5;
 }
 
+body.dark-mode .app-header {
+  background-color: #2F2D41;
+}
+
 body.light-mode {
   background-color: #fff;
   color: #333;
   transition: background-color 0.3s ease;
 }
+
+body.light-mode .header-title {
+  color: #333;
+}
+
+body.light-mode .app-logo {
+  filter: invert(95%);
+}
+
 body.dark-mode {
-  background-color: #182130;
+  background-color: #2F2D41;
   color: #f5f5f5;
 }
 
 body.dark-mode .main-input {
-  background-color: #182130;
+  background-color: #201E2D;
   color: #f5f5f5;
-}
-
-body.dark-mode .app-theme-switcher {
-  background-color: #1e2d40;
-  color: #f5f5f5;
-}
-
-body.dark-mode .app-logo {
-  background-color: #1e2d40;
-  color: #f5f5f5;
-}
-
-body.dark-mode .header-overlay {
-  background: -webkit-linear-gradient(-45deg, #514A9D, #24C6DC);
-  background: linear-gradient(-45deg, #514A9D, #24C6DC);
 }
 
 span.chakra-switch__track {
@@ -78,12 +85,12 @@ span.chakra-switch__track {
 }
 
 body.dark-mode .chakra-stat__label {
-  font-family: 'Montserrat';
+  font-family: 'Sora', sans-serif;
   color: #f5f5f5;
 }
 
 body.dark-mode .general-content {
-  background-color: #1e2d40;
+  background-color: #201E2D;
 }
 
 body.dark-mode .list-item-descrip {
@@ -92,7 +99,11 @@ body.dark-mode .list-item-descrip {
 }
 
 body.dark-mode .content-flag {
-  background-color: #182130;
+  background-color: #2F2D41;
+}
+
+body.dark-mode .theme-icon {
+  color: #fff;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -102,14 +113,14 @@ body.dark-mode .content-flag {
 }
 
 .chakra-stat {
-  font-family: 'Montserrat';
+  font-family: 'Sora', sans-serif;
   display: flex !important;
   justify-content: center !important;
 }
 
 .chakra-stat__number {
-  font-family: 'Montserrat';
-  color: #24C6DC;
+  font-family: 'Sora', sans-serif;
+  color: #4B3CFF;
 }
 
 
@@ -118,9 +129,4 @@ body.dark-mode .main-button {
   background: linear-gradient(-45deg, #514A9D, #24C6DC);
   color: #f5f5f5;
 
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
